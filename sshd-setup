@@ -1,0 +1,7 @@
+sudo patch /etc/ssh/sshd_config < sshd_config_patch.diff
+sudo systemctl restart ssh
+#fail2ban
+sudo cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local
+sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+sudo systemctl start fail2ban
+sudo systemctl enable fail2ban

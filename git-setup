@@ -1,0 +1,3 @@
+git config --global user.email "miskuzius@gmail.com"
+git config --global user.name "vipolar"
+git config --global core.editor "vim"

@@ -1,0 +1,58 @@
+--- /etc/ssh/sshd_config	2023-10-28 08:30:18.141826098 +0000
++++ shizzle	2023-10-28 08:33:19.914239857 +0000
+@@ -11,7 +11,8 @@
+ 
+ Include /etc/ssh/sshd_config.d/*.conf
+ 
+-#Port 22
++Protocol 2
++Port 2503
+ #AddressFamily any
+ #ListenAddress 0.0.0.0
+ #ListenAddress ::
+@@ -30,10 +31,10 @@
+ # Authentication:
+ 
+ #LoginGraceTime 2m
+-PermitRootLogin yes
++PermitRootLogin prohibit-password
+ #StrictModes yes
+-#MaxAuthTries 6
+-#MaxSessions 10
++MaxAuthTries 3
++MaxSessions 1
+ 
+ #PubkeyAuthentication yes
+ 
+@@ -54,7 +55,7 @@
+ #IgnoreRhosts yes
+ 
+ # To disable tunneled clear text passwords, change to no here!
+-PasswordAuthentication yes
++PasswordAuthentication no
+ PermitEmptyPasswords no
+ 
+ # Change to yes to enable challenge-response passwords (beware issues with
+@@ -87,7 +88,7 @@
+ #AllowAgentForwarding yes
+ #AllowTcpForwarding yes
+ #GatewayPorts no
+-X11Forwarding yes
++X11Forwarding no
+ #X11DisplayOffset 10
+ #X11UseLocalhost yes
+ #PermitTTY yes
+@@ -104,9 +105,12 @@
+ #PermitTunnel no
+ #ChrootDirectory none
+ #VersionAddendum none
++DisableForwarding yes
++IgnoreRhosts yes
+ 
+ # no default banner path
+-#Banner none
++DebianBanner no
++Banner none
+ 
+ # Allow client to pass locale environment variables
+ AcceptEnv LANG LC_*
