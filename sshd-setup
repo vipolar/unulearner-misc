@@ -1,3 +1,4 @@
+#Enable forwarding manually if you want VSCode to be able to connect (tcpforwarding and forwarding in general)
 sudo patch /etc/ssh/sshd_config < sshd_config_patch.diff
 sudo systemctl restart ssh
 #fail2ban
