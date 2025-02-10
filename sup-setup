@@ -1,7 +1,0 @@
-sudo apt install unattended-upgrades
-sudo apt install update-notifier-common
-sudo dpkg-reconfigure --priority=low unattended-upgrades
-sudo patch /etc/apt/apt.conf.d/50unattended-upgrades < sup_config_patch.diff
-sudo systemctl restart unattended-upgrades.service
-#sudo DEBIAN_PRIORITY=low apt install postfix
-#find a Digital Ocean tutorial for the above before proceeding

@@ -1,4 +1,0 @@
-sudo apt install certbot python3-certbot-nginx
-sudo ufw delete allow 'Nginx HTTP'
-sudo ufw allow 'Nginx Full'
-sudo certbot --nginx -d xloodtravel-development.website -d db.xloodtravel-development.website -d backend.xloodtravel-development.website -d frontend.xloodtravel-development.website
